@@ -82,9 +82,9 @@ int main()
 
 	// build and compile shaders
 	// -------------------------
-	Shader ourShader("anim_model.vs", "anim_model.fs");
+	//Shader ourShader("anim_model.vs", "anim_model.fs");
+    Shader ourShader("src/8.guest/2020/skeletal_animation/anim_model.vs", "src/8.guest/2020/skeletal_animation/anim_model.fs");
 
-	
 	// load models
 	// -----------
 	Model ourModel(FileSystem::getPath("resources/objects/vampire/dancing_vampire.dae"));
@@ -109,7 +109,7 @@ int main()
 		// -----
 		processInput(window);
 		animator.UpdateAnimation(deltaTime);
-		
+
 		// render
 		// ------
 		glClearColor(0.05f, 0.05f, 0.05f, 1.0f);
@@ -170,7 +170,7 @@ void processInput(GLFWwindow* window)
 // ---------------------------------------------------------------------------------------------
 void framebuffer_size_callback(GLFWwindow* window, int width, int height)
 {
-	// make sure the viewport matches the new window dimensions; note that width and 
+	// make sure the viewport matches the new window dimensions; note that width and
 	// height will be significantly larger than specified on retina displays.
 	glViewport(0, 0, width, height);
 }

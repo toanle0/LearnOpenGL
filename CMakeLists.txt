@@ -1,4 +1,4 @@
-cmake_minimum_required (VERSION 3.0)
+cmake_minimum_required (VERSION 3.5)
 cmake_policy(VERSION 3.0)
 
 project(LearnOpenGL)
@@ -195,7 +195,8 @@ include_directories(${CMAKE_BINARY_DIR}/configuration)
 add_library(STB_IMAGE "src/stb_image.cpp")
 set(LIBS ${LIBS} STB_IMAGE)
 
-add_library(GLAD "src/glad.c")
+add_library(GLAD "src/glad.c"
+        includes/assimp/material.inl)
 set(LIBS ${LIBS} GLAD)
 
 macro(makeLink src dest target)

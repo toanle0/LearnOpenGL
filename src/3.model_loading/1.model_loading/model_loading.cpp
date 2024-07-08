@@ -79,11 +79,12 @@ int main()
     // build and compile shaders
     // -------------------------
     Shader ourShader("1.model_loading.vs", "1.model_loading.fs");
+    //Shader ourShader("src/8.guest/2020/skeletal_animation/anim_model.vs", "src/8.guest/2020/skeletal_animation/anim_model.fs");
 
     // load models
     // -----------
     Model ourModel(FileSystem::getPath("resources/objects/backpack/backpack.obj"));
-
+    //Model ourModel(FileSystem::getPath("resources/objects/vampire/dancing_vampire.dae"));
     
     // draw in wireframe
     //glPolygonMode(GL_FRONT_AND_BACK, GL_LINE);

@@ -71,7 +71,7 @@ public:
 			m_Scales.push_back(data);
 		}
 	}
-	
+
 	void Update(float animationTime)
 	{
 		glm::mat4 translation = InterpolatePosition(animationTime);
@@ -82,7 +82,7 @@ public:
 	glm::mat4 GetLocalTransform() { return m_LocalTransform; }
 	std::string GetBoneName() const { return m_Name; }
 	int GetBoneID() { return m_ID; }
-	
+
 
 
 	int GetPositionIndex(float animationTime)
